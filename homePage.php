@@ -199,7 +199,7 @@ $username = isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username'
 
 
                 <h2><span class="badge rounded-pill bg-primary text-light">Xin chào
-                        User </span></h2>
+                <?php echo $username; ?></span></h2>
                 <br>
 
                 <h3><span class="badge rounded-pill bg-light text-dark">Sản phẩm nổi bật</span></h3>
