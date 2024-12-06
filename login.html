@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles/dangNhap.css">
+    <script src="face-api.min.js" defer></script>
+    <script src="login.js" defer></script>
+    <style>
+        #displayFace {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+            text-align: center;
+        }
+        .hidden {
+            display: none;
+        }
+        
+canvas {
+    margin-top: 40px;
+    z-index: 2; /* Canvas overlays video */
+    pointer-events: none; /* Allows interactions with buttons under the canvas */
+}
+
+    </style>
+</head>
+<body>
+    <h3 class="containerDN">Đăng Nhập</h3>
+    <div class="container" id="container">
+        <div class="form-container sign-in-container">
+            <form id="loginForm">
+                <h1>Sign in</h1>
+                <input type="text" id="username" name="user" placeholder="Username" required>
+                <input type="password" id="password" name="pass" placeholder="Password" required>
+                <a href="index.html">Register</a>
+                <a href="quenMatKhau.php">Forgot your password?</a>
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="displayFace">
+        <h2>Face Verification</h2>
+        <h2 class="containerDN"><a href="login.html" style="color: aliceblue;">Hãy quay lại đi nếu bạn là người giả mạo</a></h2>
+        <video src="" autoplay="true" id="videoElm"></video>
+        <button id="verifyFaceBtn">Verify Face</button>
+    </div>
+
+
+    
+</body>
+</html>

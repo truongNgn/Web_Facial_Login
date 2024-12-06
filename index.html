@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/dangNhap.css">
+    <script src="face-api.min.js" defer></script>
+    <script src="index.js" defer></script>
+    <style>
+        #displayFace {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+            text-align: center;
+        }
+        .hidden {
+            display: none;
+        }
+        
+canvas {
+    
+    margin-bottom: 5px;
+    margin-right: 16.5px;
+}
+    </style>
+</head>
+<body>
+    <h2 class="containerDN">Đăng ký</h2>
+    <div class="container" id="container">
+        <div class="form-container sign-in-container">
+            <form id="registerForm">
+                <h1>Register</h1>
+                <input type="text" id="username" name="user" placeholder="Username" required>
+                <input type="password" id="password" name="pass" placeholder="Password" required>
+                <a href="login.html">Already have account ?</a>
+                <button type="submit">Next</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="displayFace">
+        <h2>Face Registration</h2>
+        <video src="" autoplay="true" id="videoElm"></video>
+        
+        <button id="registerBtn">Complete Registration</button>
+        <h5><a href="index.html">Trở về</a></h5>
+        
+    </div>
+</body>
+</html>
