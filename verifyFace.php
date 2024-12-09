@@ -41,7 +41,7 @@ if (isset($input['descriptor']) && isset($_SESSION['storedDescriptor'])) {
     // Compare input descriptor with the stored descriptor
     $similarity = cosineSimilarity($inputDescriptor, $storedDescriptor);
 
-    // Set a strict threshold for face similarity (e.g., 0.95)
+    // Set a strict threshold for face similarity 
     if ($similarity > 0.95) {
         echo json_encode(['success' => true, 'message' => 'Face verification successful!']);
     } else {
